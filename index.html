@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>August Trollb&auml;ck</title>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:300,900,300italic' rel='stylesheet' type='text/css'>
+
+        <style>
+        #header {
+            text-align: center;
+            font-family: 'Merriweather', serif;
+            font-weight: 100;
+        }
+
+        #accounts {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        body {
+            color: #484141;
+            font-family: 'Merriweather', serif;
+        }
+
+        .vsep {
+            width: 50%;
+            height: 1px;
+            background-color: #ADADAD;
+            margin: 0 auto;
+        }
+
+        #content {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3em;
+            width: 50%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .item:hover {
+            background-color: #FFD17C;
+        }
+
+        .angle {
+            position: absolute;
+            width: 17px;
+            height: 9px;    display: inline-block;
+
+                margin-left: -24px;
+
+            border-left: 1px solid #484141;
+            border-bottom: 1px solid #484141;
+        }
+
+        ul {
+            position: relative;
+            list-style-type: none;
+        }
+        .treeside {
+            margin-left: -24px;
+            position: absolute;
+            width: 1px;
+            border-left: 1px solid #484141;
+            height: calc(100% - 20px);
+        }
+        </style>
+    </head>
+    <body>
+        <h1 id="header">August Trollb&auml;ck</h1>
+        <div id="accounts">
+            <a href="https://github.com/augustt198" title="(GitHub)">Code</a>
+            &bull;
+            <a href="mailto:augustt198@gmail.com" title="(E-mail)">Contact</a>
+        </div>
+        <div class="vsep"></div>
+        <div id="content"></div>
+
+        <script>
+        var sample = {
+            node: {
+                name: "Person",
+                id: "person",
+                children: [
+                    {
+                        name: "Programmer",
+                        id: "programmer",
+                        children: [
+                            {name: "Projects", id: "projects"}
+                        ]
+                    },
+                    {
+                        name: "Student",
+                        id: "student"
+                    }
+                ]
+            }
+        };
+        console.log(sample);
+        function createListItem(data, root) {
+            var liElem = document.createElement("LI");
+            if (!root) {
+                var div = document.createElement("DIV");
+                div.setAttribute("class", "angle");
+                liElem.appendChild(div);
+            }
+            liElem.appendChild(document.createTextNode(data.name));
+            if (data.children === undefined) {
+                return liElem;
+            }
+            var ulElem = document.createElement("UL");
+
+            var vline  = document.createElement("DIV");
+            vline.setAttribute("class", "treeside");
+            ulElem.appendChild(vline);
+
+            for (var i = 0; i < data.children.length; i++) { 
+                var child = data.children[i];
+                ulElem.appendChild(createListItem(child));
+            }
+            liElem.appendChild(ulElem);
+            return liElem;
+        }
+
+        var item = createListItem(sample.node, true);
+        console.log(item);
+        var wrapper = document.createElement("UL");
+        wrapper.appendChild(item);
+        document.getElementById("content").appendChild(wrapper);
+        </script>
+    </body>
+</html>

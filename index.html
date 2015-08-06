@@ -300,7 +300,8 @@
             liElem.appendChild(link);
             var ulElem = document.createElement("UL");
             ulElem.setAttribute("id", "node-" + data.id);
-            ulElem.setAttribute("style", "display: none");
+            if (!root)
+                ulElem.setAttribute("style", "display: none");
 
             if (data.children.length > 1) {
                 var vline  = document.createElement("DIV");

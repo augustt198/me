@@ -1,0 +1,269 @@
+!!!
+%html
+  %head
+    %title August Trollb&auml;ck
+    %link{:href => "http://fonts.googleapis.com/css?family=Merriweather:400,300,900,300italic", :rel => "stylesheet", :type => "text/css"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    :css
+      #header {
+          margin-top: 1em;
+          text-align: center;
+          font-family: 'Merriweather', serif;
+          font-weight: 100;
+      }
+
+      #accounts {
+          text-align: center;
+          margin-bottom: 1em;
+      }
+
+      body {
+          color: #484141;
+          font-family: 'Merriweather', serif;
+      }
+
+      body.hacker {
+          background-color: black;
+          color: #0F0;
+      }
+      body.ocean {
+          background-color: #06F;
+          color: white;
+      }
+
+      .hacker a {
+          color: #0F0;
+          border-bottom: 1px dotted #0F0;
+      }
+      .ocean a {
+          color: white;
+          border-bottom: 1px dashed white;
+      }
+
+      .year { opacity: 0.5; }
+
+      .vsep {
+          width: 400px;
+          height: 1px;
+          background-color: #ADADAD;
+          margin: 0 auto;
+      }
+
+      .hacker .vsep {
+          background-color: #0F0;
+      }
+
+      #content {
+          font-family: Consolas, Menlo, monospace;
+          font-size: 1.2em;
+          margin-left: 47%;
+          margin-left: calc(50% - 40px);
+
+          margin-top: 3em;
+      }
+
+      #items {
+          width: 500px;
+          margin: 0 auto;
+      }
+
+      @media (max-width: 550px) {
+          .vsep {
+              width: 50%;
+          }
+          #content {
+              display: table;
+              margin: 0 auto;
+          }
+          #items {
+              width: 80%;
+          }
+      }
+
+      ul.root {
+          padding-left: 0;
+      }
+
+      a {
+          text-decoration: none;
+      }
+      #items a {
+          text-decoration: underline;
+      }
+
+      .item:hover {
+          background-color: #FFD17C;
+      }
+
+      .angle {
+          position: absolute;
+          width: 17px;
+          height: 9px;
+          display: inline-block;
+          margin-left: -24px;
+          border-left: 1px solid #484141;
+          border-bottom: 1px solid #484141;
+      }
+
+      .hacker .angle {
+          border-color: #0F0;
+      }
+      .ocean .angle {
+          border-color: white;
+      }
+
+      ul {
+          position: relative;
+          list-style-type: none;
+      }
+      .treeside {
+          margin-left: -24px;
+          position: absolute;
+          width: 1px;
+          border-left: 1px solid #484141;
+          height: 100%;
+      }
+      .hacker .treeside {
+          border-color: #0F0;
+      }
+      .ocean .treeside {
+          border-color: white;
+      }
+
+      .obscure {
+          bottom: 0;
+          margin-bottom: 18px;
+          margin-left: 12px;
+          background-color: white;
+          position: absolute;
+          height: 20px;
+          width: 10px;
+      }
+      .hacker .obscure {
+          background-color: black;
+      }
+      .ocean .obscure {
+          background-color: #06F;
+      }
+      
+      .swatch-container {
+          height: 50px;
+          padding: 0 10px;
+          background-color: #eee;
+          bottom: 0;
+          right: 0;
+          margin: 15px;
+          position: absolute;
+      }
+
+      .swatch {
+          margin-right: 5px;
+          display: inline-block;
+          margin-top: 10px;
+          width: 30px;
+          height: 30px;
+          border: 1px solid #9C9C9C;
+      }
+
+      .swatch-last {
+          margin: 0;
+      }
+
+      .swatch-left {
+          border-style: solid;
+          border-color: transparent;
+          border-width: 30px 30px 0 0;
+      }
+      .swatch-right {
+          border-style: solid;
+          border-color: transparent;
+          border-width: 0 0 30px 30px;
+          margin-top: -30px;
+      }
+
+      pre {
+        font-family: Consolas, Menlo, monospace;
+        padding: 5px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+      }
+      .ocean pre {
+        background-color: #277EFF;
+      }
+      .hacker pre {
+        background-color: transparent;
+      }
+      .normal .c-kw { color: purple; }
+      .normal .c-nl { color: blue; }
+      .normal .c-sl { color: green; }
+  %body.normal
+    %h1#header August Trollb&auml;ck
+    #accounts
+      %a{:href => "https://github.com/augustt198", :title => "(GitHub)"} Code
+      \&bull;
+      %a{:href => "mailto:augustt198@gmail.com", :title => "(E-mail)"} Contact
+    .vsep
+    #content
+      %ul.root
+        - gen_node_html(@data, true)
+    #items
+      - @items.each do |item|
+        %item{id: "item-" + item["id"], style: "display: none"}
+          %br
+          .vsep
+          %br
+          - if item["snippet"]
+            != preserve File.read(File.join("snippets", item["snippet"]))
+          - elsif item["desc"].is_a? Array
+            != item["desc"].join(' ')
+          - else
+            != item["desc"] 
+
+    .swatch-container
+      %a{:href => "javascript:theme(\"ocean\")"}
+        .swatch
+          .swatch-left{:style => "border-top-color: white"}
+          .swatch-right{:style => "border-bottom-color: #0000FF"}
+      %a{:href => "javascript:theme(\"hacker\")"}
+        .swatch.swatch-last
+          .swatch-left{:style => "border-top-color: #0F0"}
+          .swatch-right{:style => "border-bottom-color: black"}
+
+    :javascript
+      const BODY_ELEM = document.querySelector("body");
+      function theme(name) {
+          if (BODY_ELEM.getAttribute("class") == name) {
+              BODY_ELEM.setAttribute("class", "normal");
+          } else {
+              BODY_ELEM.setAttribute("class", name);
+          }
+      }
+
+      function foldNode(id) {
+          var elem = document.getElementById(id);
+          if (elem.getAttribute("style") !== null) {
+              elem.removeAttribute("style");
+          } else {
+              elem.setAttribute("style", "display: none");
+          }
+      }
+    
+      var CURRENT_ITEM = undefined;
+      var CURRENT_SELECTED = undefined;
+      function item(id) {
+        var itemId = "item-" + id;
+        if (CURRENT_ITEM !== undefined) {
+          CURRENT_ITEM.setAttribute("style", "display: none");
+          var old_id = CURRENT_ITEM.getAttribute("id");
+          CURRENT_ITEM = undefined;
+          CURRENT_SELECTED.removeAttribute("style");
+          if (old_id === itemId)
+            return;
+        }
+        
+        CURRENT_ITEM = document.getElementById(itemId);
+        CURRENT_ITEM.removeAttribute("style");
+        var nodeId = "node-" + id;
+        CURRENT_SELECTED = document.getElementById(nodeId);
+        CURRENT_SELECTED.setAttribute("style", "font-weight: 600");
+      }

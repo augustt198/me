@@ -1,0 +1,7 @@
+# Generated with gen.rb
+index.html
+
+# vim
+*.swp
+
+.DS_Store

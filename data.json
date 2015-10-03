@@ -1,0 +1,102 @@
+{
+    "name": "Person",
+    "id": "r",
+    "type": "dir",
+    "children": [
+        {
+            "name": "Programmer",
+            "id": "p",
+            "type": "dir",
+            "children": [
+                {
+                    "name": "Projects",
+                    "id": "prj",
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "Lumen",
+                            "id": "lm",
+                            "type": "item",
+                            "snippet": "lumen.html"
+                        },
+                        {
+                            "name": "Flood",
+                            "id": "fl",
+                            "type": "item",
+                            "desc": [
+                                "Flood is a WIP BitTorrent client written in C.",
+                                "The source can be found",
+                                "<a href=\"https://github.com/augustt198/lumen\">on GitHub</a>"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Experience",
+                    "id": "xp",
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "Bloomberg L.P.",
+                            "id": "blp",
+                            "type": "item",
+                            "desc": [
+                                "I interned at Bloomberg L.P. headquarters in NYC during the summer of 2015.",
+                                "I worked in the",
+                                "<a href='http://www.bloomberg.com/careers/technology/rd/'>Research & Development department</a>",
+                                "on the",
+                                "<a href='http://www.bloomberg.com/trading-solutions/buy-side/'>AIM</a> team",
+                                "to create internal tooling."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Awards",
+                    "id": "aw",
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "PennApps XII",
+                            "id": "pxii",
+                            "type": "item",
+                            "desc": [
+                                "I was the team leader of <i>SemQuery</i>,",
+                                "a project awarded 3rd place at PennApps XII.",
+                                "We were the only high schoolers to place at PennApps -",
+                                "the largest collegiate hackathon in the world.",
+                                "<span class='year'>(2015)</span>"
+                            ]
+                        },
+                        {
+                            "name": "SJC Programming Competition",
+                            "id": "stj",
+                            "type": "item",
+                            "desc": [
+                                "My team placed 2nd at St. Joseph's College Programming Competition",
+                                "(greater New York area)."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Photographer",
+            "id": "ph",
+            "type": "link",
+            "link": "/photos"
+        },
+        {
+            "name": "Student",
+            "id": "s",
+            "type": "item",
+            "desc": [
+                "I'm a junior in high school. Currently taking AP Physics C,",
+                "AP Calculus BC, AP English Language and Composition,",
+                "AP U.S. History, AP Computer Science Principles,",
+                "and math research."
+            ]
+        }
+    ]
+}

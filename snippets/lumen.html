@@ -1,0 +1,16 @@
+Lumen is a JVM language I created.
+The source can be found
+<a href="https://github.com/augustt198/lumen">on GitHub</a>.
+<br>Example syntax:
+
+<pre>
+<b class="c-kw">class</b> Test {
+    <b class="c-kw">pb stc def</b> main(args: String[]) {
+        <b class="c-kw">var</b> sum: <b class="c-kw">int</b> = <span class="c-nl">0</span>
+        <b class="c-kw">each</b> arg <b class="c-kw">in</b> args {
+            sum = sum + Integer::parseInt(arg) <b class="c-kw">rescue</b> <span class="c-nl">0</span>
+        }
+        System::out.println(<span class="c-sl">"Sum: "</span> + sum)
+    }
+}
+</pre>

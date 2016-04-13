@@ -46,8 +46,32 @@
                                 "<a href='http://www.bloomberg.com/careers/technology/rd/'>Research & Development department</a>",
                                 "on the",
                                 "<a href='http://www.bloomberg.com/trading-solutions/buy-side/'>AIM</a> team",
-                                "to create internal tooling."
+                                "to create internal tooling.",
+                                "<br><br><img class=\"img-item\" src=\"assets/bloomberg_office.png\">",
+                                "<div class=\"caption\">Bloomberg NYC headquarters</div>"
                             ]
+                        },
+                        {
+                            "name": "Mathpix Inc.",
+                            "id": "mpx",
+                            "type": "item",
+                            "desc": [
+                                "I'm a full-stack software developer at Mathpix Inc.",
+                                "Mathpix is the first app that can evaluate photos of",
+                                "handwritten math.",
+                                "<a href=\"http://mathpix.com\">Check it out.</a>"
+                            ]
+                        },
+                        {
+                            "name": "FRC Team 334",
+                            "id": "frc",
+                            "type": "item",
+                            "desc": [
+                                "I'm the programming lead on <i>FIRST</i> Robotics",
+                                "<a href=\"http://bthsrobotics.com\"> team 334</a>.",
+                                "<br><br><img class=\"img-item\" src=\"assets/team334.jpg\">",
+                                "<div class=\"caption\">Our 2016 robot</div>"
+                            ] 
                         }
                     ]
                 },
@@ -56,6 +80,17 @@
                     "id": "aw",
                     "type": "dir",
                     "children": [
+                        {
+                            "name": "AP Computer Science",
+                            "id": "apcs",
+                            "type": "item",
+                            "desc": [
+                                "I achieved a perfect score on the 2015 AP Computer",
+                                "Science examination. Out of 48,994 students worldwide,",
+                                "only 67 students received perfect scores. I took the",
+                                "exam as a sophomore."
+                            ]
+                        },
                         {
                             "name": "PennApps XII",
                             "id": "pxii",

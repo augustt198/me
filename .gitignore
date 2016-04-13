@@ -3,5 +3,6 @@ index.html
 
 # vim
 *.swp
+*.swo
 
 .DS_Store

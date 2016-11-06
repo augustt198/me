@@ -25,8 +25,31 @@
                             "type": "item",
                             "desc": [
                                 "Flood is a WIP BitTorrent client written in C.",
-                                "The source can be found",
+                                "Source code:",
                                 "<a href=\"https://github.com/augustt198/lumen\">on GitHub</a>"
+                            ]
+                        },
+                        {
+                            "name": "latex2sympy",
+                            "id": "l2s",
+                            "type": "item",
+                            "desc": [
+                                "latex2sympy is a utility for converting mathematics",
+                                "typeset in LaTeX to symbolic expressions used by",
+                                "<a href=\"http://www.sympy.org/en/index.html\">SymPy</a>.",
+                                "Source code:",
+                                "<a href=\"https://github.com/augustt198/latex2sympy\">on GitHub</a>"
+                            ]
+                        },
+                        {
+                            "name": "ml",
+                            "id": "ml",
+                            "type": "item",
+                            "desc": [
+                                "The creatively named <code>ml</code> is a machine learning",
+                                "library that can be used to create and train fully-connected",
+                                "and convolutional neural networks.",
+                                "Source code: <a href=\"https://github.com/augustt198/ml\">on GitHub</a>"
                             ]
                         }
                     ]
@@ -56,7 +79,7 @@
                             "id": "mpx",
                             "type": "item",
                             "desc": [
-                                "I'm a full-stack software developer at Mathpix Inc.",
+                                "I'm a cofounder/full-stack software developer at Mathpix Inc.",
                                 "Mathpix is the first app that can evaluate photos of",
                                 "handwritten math.",
                                 "<a href=\"http://mathpix.com\">Check it out.</a>"
@@ -72,6 +95,18 @@
                                 "<br><br><img class=\"img-item\" src=\"assets/team334.jpg\">",
                                 "<div class=\"caption\">Our 2016 robot</div>"
                             ] 
+                        },
+                        {
+                            "name": "MIT BWSI",
+                            "id": "bwsi",
+                            "type": "item",
+                            "desc": [
+                                "I participated in the 2016 MIT Beaver Works Summer Institute.",
+                                " We learned about programming autonomous vehicles from MIT faculty,",
+                                " MIT Lincoln Laboratories staff, JPL engineers, and others.",
+                                "<br><br>Here's a report written by myself and Max Krieger about the program:",
+                                " <a href=\"https://augustt198.github.io/bwsi-report/\">BWSI Report</a>"
+                            ]
                         }
                     ]
                 },
@@ -127,10 +162,8 @@
             "id": "s",
             "type": "item",
             "desc": [
-                "I'm a junior in high school. Currently taking AP Physics C,",
-                "AP Calculus BC, AP English Language and Composition,",
-                "AP U.S. History, AP Computer Science Principles,",
-                "and math research."
+                "I'm a senior in high school. Currently taking computer integrated manufacturing,",
+                "AP Statistics, linear algebra, multivariable calculus, AP economics."
             ]
         }
     ]

@@ -24,8 +24,10 @@ def gen_node_html(node, root)
       @items << node
     elsif node["type"] == "link"
       a[:href] = node["link"]
+      a[:target] = "_blank"
       haml_tag(:a, a)  do
         haml_concat node["name"]
+        haml_tag(:span, {class: "icon-external-link"})
       end
     elsif node["type"] == "dir"
       a[:href] = "javascript:foldNode('#{node["id"]}')";

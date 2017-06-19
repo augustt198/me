@@ -94,7 +94,7 @@
                                 "<a href=\"http://bthsrobotics.com\"> team 334</a>.",
                                 "<br><br><img class=\"img-item\" src=\"assets/team334.jpg\">",
                                 "<div class=\"caption\">Our 2016 robot</div>"
-                            ] 
+                            ]
                         },
                         {
                             "name": "MIT BWSI",
@@ -162,8 +162,7 @@
             "id": "s",
             "type": "item",
             "desc": [
-                "I'm a senior in high school. Currently taking computer integrated manufacturing,",
-                "AP Statistics, linear algebra, multivariable calculus, AP economics."
+                "Incoming freshman at MIT."
             ]
         }
     ]
